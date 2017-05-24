@@ -1,0 +1,187 @@
+\documentclass[10pt,twoside]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage[small,bf,sf,textfont={small,sf,bf}]{caption}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage{fancyheadings}
+\usepackage{SPE}
+\usepackage[round]{natbib}
+\usepackage{pslatex}
+\usepackage{color}
+\usepackage{natbib}
+
+\setlength{\textheight}{9.4in}
+\begin{document}
+
+\pagestyle{fancy}
+
+\lhead
+[\small \sffamily \thepage]{\small \sffamily SPE xxxxxx}
+%\chead [\small  \sffamily AUTHOR 1 AND AUTHOR 2]
+%{\small \sffamily \qquad Title of the paper
+\rhead[\small \sffamily SPE XXXXXX]{\small\sffamily \thepage}
+
+\rfoot[]{}
+\cfoot[]{}
+\lfoot[]{}
+%\setlength{\headrulewidth}{1pt} \setlength{\footrulewidth}{0pt}
+%
+%
+\setlength{\columnseprule}{0pt}
+
+\newcommand{\trp}{^{\scriptsize \text{T}}}
+\newcommand{\itp}{^{\scriptsize -\text{T}}}
+\newcommand{\sqrtp}{^{\scriptsize \text{T/2}}}
+\newcommand{\isqrtp}{^{\scriptsize -\text{T/2}}}
+\newcommand{\inv}{^{\scriptsize -1}}
+\newcommand{\sqr}{^{\scriptsize \text{1/2}}}
+\newcommand{\invsqr}{^{\scriptsize -\text{1/2}}}
+
+\thispagestyle{empty}
+\vspace*{-1.0in}
+\title{{\noindent \sffamily \Large my project}}
+
+\begin{figure}[!ht]
+\flushright
+\includegraphics[width=0.23\textwidth]{./SPEInt}
+\setlength{\abovecaptionskip}{-10pt}
+\end{figure}
+
+%\vspace*{0.625in}
+
+{\noindent \sffamily \Large SPE xxxxxx}
+
+\vspace*{32pt}
+
+{\noindent \sffamily \Large {Template of SPE conference paper } }
+
+
+
+{\noindent \sffamily Author 1 , SPE, U. of Tulsa and Author 2, SPE, U. of Tulsa}
+\bigskip
+
+\noindent \parbox[t]{7.5in}{ \scriptsize \sffamily \noindent
+Copyright 2011, Society of Petroleum Engineers
+
+\medskip
+
+\noindent This paper was prepared for presentation at the SPE Reservoir Simulation Symposium held in The Woodlands, Texas, USA, 21-23 February 2011.
+
+\medskip
+
+\noindent This paper was selected for presentation by an SPE program committee following review of information contained in an abstract submitted by the author(s). Contents of the paper have not been reviewed by the Society of Petroleum Engineers and are subject to correction by the author(s). The material does not necessarily reflect any position of the Society of Petroleum Engineers, its officers, or members. Electronic reproduction, distribution, or storage of any part of this paper without the written consent of the Society of Petroleum Engineers is prohibited. Permission to reproduce in print is restricted to an abstract of not more than 300 words; illustrations may not be copied. The abstract must contain conspicuous acknowledgment of SPE copyright.
+
+\noindent \hrulefill}
+
+
+\section*{Abstract}
+\label{Sec:Abstract}
+
+This file can be used as a template for write SPE conference papers...
+
+\section{Introduction}
+\label{Sec:Intro}
+
+Introduction...  \citep{RefWorks:25}
+
+\section{Section 1}
+\label{Sec:Section1}
+
+Abbreviate and capitalize ``equation'', ``figure'', ``reference'' and ``column'' when followed by a number or designating letter. Do not abbreviate ``table'',. ``appendix'' or ``page''. Use Eq.~1, Fig.~\ref{Fig:Figure1} or Figs.~\ref{Fig:Figure1} and \ref{Fig:Figure2}, Table~1 and Appendix A.
+
+When a figure is cited for the first time and happens to be in parentheses, both the figure number and the parentheses should be bold, along with any punctuation that immediately follows the parentheses \textbf{(Fig.~\ref{Fig:Figure1})}. If a figure is cited for the first time and is enclosed in parentheses along with additional text, then ONLY the figure designation should be bold, not the parentheses or any following punctuation (see data in \textbf{Fig.~\ref{Fig:Figure1}}). Bold the first reference to a portion of a multipartite figure \textbf{(Fig.~\ref{Fig:Figure2}a)}, but leave subsequent references to other parts in normal type.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.30\linewidth]{./SPEInt.pdf}
+    \caption{Example of figure.}
+    \label{Fig:Figure1}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \captionsetup{justification=centering}
+    \subfloat[\small{Subcaption 1}]{
+        \includegraphics[width=0.2\linewidth]{./SPEInt.pdf}
+    }
+    \subfloat[\small{Subcaption 2}]{
+        \includegraphics[width=0.2\linewidth]{./SPEInt.pdf}
+    }
+    \subfloat[\small{Subcaption 3}]{
+        \includegraphics[width=0.2\linewidth]{./SPEInt.pdf}
+    }
+\captionsetup{justification=justified}
+\caption{Example of multiple figures (use subfig package).}
+\label{Fig:Figure2}
+\end{figure}
+
+
+\section{Conclusions}
+\label{Sec:Conclusions}
+
+We presented an application of...
+
+
+\section{Acknowledgements}
+
+The support of the member companies of The University of Tulsa Petroleum Reservoir Exploitation Projects (TUPREP) is gratefully acknowledged.
+
+\section{Nomenclature}
+\vskip -0.2in
+
+\begin{align*}
+y & =  \quad \text{state vector} \\
+m & =  \quad \text{vector of model parameters} \\
+p & =  \quad \text{vector of primary variables} \\
+d & =  \quad \text{vector of predicted data} \\
+d_\text{obs} & =  \quad \text{vector of observed data} \\
+d_{\text{uc}} & =  \quad \text{vector of perturbed observations} \\
+g(m) & =  \quad \text{vector of predicted data} \\
+C_\text{Y}  & =  \quad \text{state covariance matrix} \\
+C_\text{YD} & =  \quad \text{cross-covariance between state and predicted data} \\
+C_\text{MD} & =  \quad \text{cross-covariance between model parameters and predicted data} \\
+C_\text{PD} & =  \quad \text{cross-covariance between primary variables and predicted data} \\
+C_\text{DD} & =  \quad \text{auto-covariance of predicted data} \\
+C_\text{D}  & =  \quad \text{covariance matrix of measurement errors} \\
+H & =  \quad \text{augmented matrix for EnKF} \\
+K & =  \quad \text{Kalman gain matrix} \\
+\rho & =  \quad \text{correlation matrix for localization} \\
+N_d & =  \quad \text{total number of observed data (all times)} \\
+N_n & =  \quad \text{number of observed data at $n$th data assimilation step}\\
+N_m & =  \quad \text{number of model parameters} \\
+N_p & =  \quad \text{number of reservoir simulator primary variables} \\
+N_y & =  \quad \text{size of the state vector. $N_y = N_m + N_p + N_n$} \\
+N_e & =  \quad \text{number of ensemble members} \\
+N_g & =  \quad \text{number of active gridblocks} \\
+O_d(m) & = \quad \text{likelihood objective function}\\
+O_N(m) & = \quad \text{normalized likelihood objective function}
+\end{align*}
+
+\section{Subscripts}
+\vskip -0.2in
+
+\begin{align*}
+n    & = \quad \text{data assimilation step number}\\
+j    & = \quad \text{ensemble member}\\
+\end{align*}
+
+\section{Superscripts}
+
+
+
+\vskip -0.2in
+
+\begin{align*}
+n  & = \quad \text{data assimilation step number}\\
+a  & = \quad \text{analysis} \\
+f  & = \quad \text{forecast}
+\end{align*}
+
+\vskip -0.2in
+
+
+\bibliographystyle{agsm}
+\bibliography{mybib}
+\vskip 0.2in
+
+\end{document}
